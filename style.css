@@ -1,8 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Reenie Beanie&display=swap");
+
+body {
+  background-image: url("cork board.jpeg");
+}
+
+.text {
+  font-family: "Reenie Beanie";
+  font-size: 3em;
+}
+
+.task {
+  text-align: center;
+  width: 275px;
+  margin: 10px;
+  min-height: 250px;
+  max-height: 250px;
+  padding-top: 35px;
+  position: relative;
+  border: 1px solid #e8e8e8;
+
+  border-bottom-right-radius: 60px 5px;
+  display: inline-block;
+  background: #ffff88;
+}
+
 #listContainer {
   display: grid;
-  margin: auto;
-  width: 50%;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+}
+
+.task:nth-child(2) {
   text-align: center;
-  border: 3px solid green;
-  height: auto;
+  width: 275px;
+  margin: 10px;
+  min-height: 250px;
+  max-height: 250px;
+  padding-top: 35px;
+  position: relative;
+  border: 1px solid #e8e8e8;
+
+  border-bottom-right-radius: 60px 5px;
+  display: inline-block;
+  background: #ffff88;
 }
