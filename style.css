@@ -12,7 +12,7 @@ body {
 .task {
   text-align: center;
   width: 275px;
-  margin: 10px;
+  margin: 20px;
   min-height: 250px;
   max-height: 250px;
   padding-top: 35px;
@@ -22,6 +22,9 @@ body {
   border-bottom-right-radius: 60px 5px;
   display: inline-block;
   background: #ffff88;
+  transform: rotate(6deg);
+  margin-top: 50px;
+  margin-bottom: 40px;
 }
 
 #listContainer {
@@ -30,17 +33,21 @@ body {
   justify-content: space-evenly;
 }
 
-.task:nth-child(2) {
-  text-align: center;
-  width: 275px;
-  margin: 10px;
-  min-height: 250px;
-  max-height: 250px;
-  padding-top: 35px;
-  position: relative;
-  border: 1px solid #e8e8e8;
+.task:nth-child(2n) {
+  transform: rotate(-3deg);
+  top: 5px;
+  background: #cfc;
+}
 
-  border-bottom-right-radius: 60px 5px;
-  display: inline-block;
-  background: #ffff88;
+.task:nth-child(3n) {
+  transform: rotate(4deg);
+  top: -5px;
+  background: #ccf;
+}
+
+.task:hover,
+.task:focus {
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+  transform: scale(1.25);
+  z-index: 5;
 }
