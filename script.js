@@ -1,8 +1,10 @@
-const input = document.getElementById("textinput");
-const sumbitButton = document.getElementById("sumbitButton");
+const input = document.getElementById("createTask");
 const todoList = document.getElementById("listContainer");
+const sumbitTask = document.getElementById("write");
+const fpostit = document.getElementById("input");
+const donelist = document.getElementById("listContainer2");
 
-sumbitButton.addEventListener("click", function () {
+sumbitTask.addEventListener("click", function () {
   createTask();
 });
 
@@ -34,12 +36,15 @@ function createTask() {
   div.append(image);
   div.append(image2);
 
-  todoList.append(div);
+  todoList.insertBefore(div, fpostit);
+
   image.addEventListener("click", function () {
     div.remove();
   });
   image2.addEventListener("click", function () {
-    image.remove();
+    div.remove();
+    donelist.append(div);
+    image2.remove();
 
     //
   });

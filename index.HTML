@@ -8,12 +8,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <input id="textinput" placeholder="Enter Text" />
-    <button id="sumbitButton">Create Task</button>
-    <div id="listContainer"></div>
+    <nav>
+      <a href="#home">To-do</a>
+      <a href="#done">done </a>
+    </nav>
+    <section id="home">
+      <div id="listContainer">
+        <div class="task" id="input">
+          <p>
+            <textarea
+              id="createTask"
+              placeholder="Enter Text"
+              maxlength="30"
+            ></textarea>
+          </p>
+          <img src="pencil.svg" id="write" width="16" height="16" />
+        </div>
+      </div>
+    </section>
 
-    }
+    <section id="done">
+      <div id="listContainer2"></div>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
->
