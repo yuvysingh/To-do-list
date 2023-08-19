@@ -4,6 +4,9 @@ const sumbitTask = document.getElementById("write");
 const fpostit = document.getElementById("input");
 const donelist = document.getElementById("listContainer2");
 
+const done_page = document.getElementById("done")
+const home_page = document.getElementById("home")
+
 sumbitTask.addEventListener("click", function () {
   createTask();
 });
@@ -38,15 +41,28 @@ function createTask() {
 
   todoList.insertBefore(div, fpostit);
 
+
+
   image.addEventListener("click", function () {
-    div.remove();
+    image.parentNode.remove()
   });
   image2.addEventListener("click", function () {
-    div.remove();
-    donelist.append(div);
-    image2.remove();
-
-    //
+    let new_div = image2.parentElement
+    new_div.removeChild(image2)
+    donelist.appendChild(new_div)
+    image2.parentNode.remove()
   });
   input.value = "";
+}
+
+function Done() {
+  done_page.style.display = "none"
+  home_page.style.display = "block"
+}
+
+
+
+function Home() {
+  done_page.style.display = "block"
+  home_page.style.display = "none"
 }
